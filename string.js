@@ -162,18 +162,72 @@
 //     console.log(Number.parseFloat("asd23.5abc")); //NaN
 
 // iseven #####
-Number.prototype.ashish_isEven = (num)=> {
-     return num % 2 === 0;   
+// Number.prototype.ashish_isEven = (num)=> {
+//      return num % 2 === 0;   
+// }
+// const num1 = 24;
+// console.log(num1.ashish_isEven(num1));
+// console.log(Object.getOwnPropertyNames(Number.prototype));
+
+// // isodd #####
+// Number.prototype.ashish_isOdd = (num) => {
+//     return num % 2 !== 0;
+// }  
+// const num2 = 25;
+// console.log(num2.ashish_isOdd(num2));
+// console.log(Object.getOwnPropertyNames(Number.prototype));
+// //postive #####
+// Number.prototype.ashish_isPositive = (num) => {
+//       return num > 0;
+// }
+// const num3 = -5;
+// console.log(num3.ashish_isPositive(num3));
+// console.log(Object.getOwnPropertyNames(Number.prototype));
+
+// // negtaive #####
+// Number.prototype.ashish_negative = (num) =>{
+//    return num  < 0;
+// }
+// const num4 = -10;
+// console.log(num4.ashish_negative(num4));
+// console.log(Object.getOwnPropertyNames(Number.prototype));
+
+// maths #####
+
+// precedence
+//()
+//*
+//*/ %
+//+ -
+
+// console.log(3 + 5 * 2); // 13
+// console.log((3 + 5) * 2); //16
+
+// console.log(Math.PI);
+// console.log(Math.E);
+
+// console.log(Math.round(4.6)); // it will return nearest integer
+// console.log(Math.floor(4.9)); // it will return previous integer
+// console.log(Math.ceil(4.1)); // it will return next integer
+// console.log(Math.abs(-5));  // it will return positive value
+// console.log(Math.trunc(42345.9)); // it will remove decimal value 
+// console.log(Math.pow(2, 8)); // it will return power value
+// console.log(Math.sqrt(64)); // it will return square root value
+// console.log(Math.min(2, 5, -1, 0, 9)); // it will return minimum value
+// console.log(Math.max(2, 5, -1, -1, 9)); // it will return maximum value
+// console.log(Math.sign(-5)); // it will return -1 for negative , 1 for positive ,0 for zero
+// console.log(Math.random()); // it will return random value between 0 and 1
+
+// math.rendom  to generate random number between 1 to 10 but no negative value only postive value
+const randomNum = Math.floor(Math.random() * 10);
+console.log(randomNum);
+
+// make number.prototype to generate random number between two numbers
+Number.prototype.ashish_randomBetween = function(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-const num1 = 24;
-console.log(num1.ashish_isEven(num1));
+const num5 = 0;
+console.log(num5.ashish_randomBetween(23, 100));
 console.log(Object.getOwnPropertyNames(Number.prototype));
 
-// isodd #####
-Number.prototype.ashish_isOdd = (num) => {
-    return num % 2 !== 0;
-}  
-const num2 = 25;
-console.log(num2.ashish_isOdd(num2));
-console.log(Object.getOwnPropertyNames(Number.prototype));
-
+console.log(num5);
