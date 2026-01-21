@@ -1,0 +1,5 @@
+intro to js and  variables 
+
+strings prototype 
+
+number 
