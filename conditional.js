@@ -133,3 +133,11 @@ switch(dice){
         break;
 
 }
+
+//ternary operator ###
+
+//condition ? true block : false block
+const  isadult = 23;
+console.log( isadult >= 18 ? "you can vote" : "you can't vote");
+// for drive license
+console.log(isadult >= 18 ? "you can drive" : "you can't drive");

@@ -1,5 +1,7 @@
-intro to js and  variables 
+# intro to js and  variables 
 
-strings prototype 
+# strings prototype 
 
-number 
+# number 
+
+# conditional statements
