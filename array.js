@@ -65,8 +65,25 @@ const cars = ["BMW", "Audi", "Mercedes", "Toyota", "Honda"];
 // console.log(cars);
 
 // replace
-console.log(cars);
- let replacedCars = cars.splice(2, 2, "Hyundai", "Kia");
-console.log(cars);
-console.log(replacedCars);
+// console.log(cars);
+//  let replacedCars = cars.splice(2, 2, "Hyundai", "Kia");
+// console.log(cars);
+// console.log(replacedCars);
+
+
+
+// question 
+// const arr = [1, 2, 3, 4, 5, 6];
+
+// //  result   : [1, "two", "three ",4.5 ,"six"]
+
+// arr.pop();
+// arr.pop();
+// arr.push("six");
+// // arr.splice(3, 1, 4.5);
+// arr.splice(1, 3, "two", "three" ,4.5);
+
+// console.log(arr);
+
+
 
