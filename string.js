@@ -154,7 +154,7 @@
 // // parseInt
 // console.log(Number.parseInt("23.5abc")); //23
 // console.log(Number.parseInt("asd23.5abc")); //NaN
-// console.log(Number.parseInt("2as3a3.5abc",12)); 
+// console.log(parseInt("2.asd67")); 
 
 // // parsefloat 
 //  console.log(Number.parseFloat("23.5abc")); //23.5
