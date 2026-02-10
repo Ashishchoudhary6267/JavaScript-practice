@@ -65,17 +65,17 @@
 // }
 
 // trafic signal  ####
-// let signal = "yellow";
+let signal = "green" ;
 
-// if(signal === "red"){
-//     console.log("stop");
-// }
-// else if(signal === "yellow"){
-//     console.log("wait");
-// }
-// else{
-//     console.log("go");
-// }
+if(signal === "red"){
+    console.log("stop");
+}
+else if(signal === "yellow"){
+    console.log("wait");
+}
+else if(signal === "green"){
+    console.log("go");
+}
 
 // //switch stagement
 // let day = 40;
