@@ -25,3 +25,21 @@
 //     }
 // }
 // user.greet();
+
+
+
+
+// this refer to the objevct which is calling the function
+
+
+
+//
+const obj = {
+  name: "Ashish",
+  show: function(){
+    console.log(this.name);
+  }
+};
+
+const fn = obj.show;
+fn();

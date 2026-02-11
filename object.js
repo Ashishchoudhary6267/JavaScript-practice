@@ -89,13 +89,43 @@
 // delete obj.a;
 // console.log(obj);
 
-const obj ={
-    a :1,
-    b :{
-        c :2,
-    },
+// const obj ={
+//     a :1,
+//     b :{
+//         c :2,
+//     },
 
-}
-Object.freeze(obj);
-obj.b.c = 10;
-console.log(obj.b.c);
+// }
+// Object.freeze(obj);
+// obj.b.c = 10;
+// console.log(obj.b.c);
+
+// function inside object  called method #####
+const obj = {
+    name : "ashish",
+    regular(){
+        console.log(this);
+    },
+    anonymous : function(){
+        console.log(this);
+    },
+    arrowfn : ()=>{
+        console.log(this);
+    }
+};
+
+obj.regular();
+obj.anonymous();
+obj.arrowfn();
+const test = () => {
+    console.log("this is the test");
+};
+
+const testobj = {
+    test,
+};
+ test ();  // function
+ testobj.test();  // method
+
+ console.log(testobj);  // function definition
+
