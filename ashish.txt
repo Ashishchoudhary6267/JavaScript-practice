@@ -5,3 +5,13 @@
 # number 
 
 # conditional statements
+
+# function 
+#destructing 
+
+#hosting 
+#this keyword
+
+
+
+

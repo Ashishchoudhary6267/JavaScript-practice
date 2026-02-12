@@ -101,31 +101,35 @@
 // console.log(obj.b.c);
 
 // function inside object  called method #####
-const obj = {
-    name : "ashish",
-    regular(){
-        console.log(this);
-    },
-    anonymous : function(){
-        console.log(this);
-    },
-    arrowfn : ()=>{
-        console.log(this);
-    }
-};
 
-obj.regular();
-obj.anonymous();
-obj.arrowfn();
-const test = () => {
-    console.log("this is the test");
-};
+// const obj = {
+//     name : "ashish",
+//     regular(){
+//         console.log(this);
+//     },
+//     anonymous : function(){
+//         console.log(this);
+//     },
+//     arrowfn : ()=>{
+//         console.log(this);
+//     }
+// };
 
-const testobj = {
-    test,
-};
- test ();  // function
- testobj.test();  // method
+// obj.regular();
+// obj.anonymous();
+// obj.arrowfn();
 
- console.log(testobj);  // function definition
+// const test = () => {
+//     console.log("this is the test");
+// };
+
+// const testobj = {
+//     test,
+// };
+//  test ();  // function
+//  testobj.test();  // method
+
+//  console.log(testobj);  // function definition
+
+
 

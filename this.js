@@ -29,17 +29,76 @@
 
 
 
-// this refer to the objevct which is calling the function
+// function inside object  called method #####
+// const obj = {
+//     name : "ashish",
+//     regular(){
+//         console.log(this);
+//     },
+//     anonymous : function(){
+//         console.log(this);
+//     },
+//     arrowfn : ()=>{
+//         console.log(this);
+//     }
+// };
+
+// obj.regular();
+// obj.anonymous();
+// obj.arrowfn();
+
+// const test = () => {
+//     console.log("this is the test");
+// };
+
+// const testobj = {
+//     test,
+// };
+//  test ();  // function
+//  testobj.test();  // method
+
+//  console.log(testobj);  // function definition
 
 
+// const playing ={
+//     name : "ashish",
+//     greet : function() {
+//         const football = () => {
+//             console.log(this);
+//         }
+//        football();
+//     }
+    
+// }
+// playing.greet();
 
-//
-const obj = {
-  name: "Ashish",
-  show: function(){
-    console.log(this.name);
-  }
-};
 
-const fn = obj.show;
-fn();
+// function greet(){   
+//     console.log(this);
+// }
+// const person1 ={
+//     name : "ashish1",
+
+// }
+// const person2 ={
+//     name : "ashish2",
+    
+// }
+// greet.call(person1);
+// greet.call(person2);
+
+const user ={
+    name : "ashish",
+    anonymousfn : function() {
+        console.log("anonymous function", this.name);
+        const arrowfn = () => {
+            console.log("arrow function", this.name);
+        }
+        arrowfn();
+    }
+}
+const anotherUser = {
+    name : "another user",
+}
+user.anonymousfn();
+user.anonymousfn.call(anotherUser);
