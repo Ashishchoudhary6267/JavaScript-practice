@@ -11,6 +11,11 @@
 
 #hosting 
 #this keyword
+# json parse stringify
+
+# higher oder function
+callbacks
+closures  and lexical scope
 
 
 
