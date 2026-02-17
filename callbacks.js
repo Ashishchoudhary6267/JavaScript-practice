@@ -83,6 +83,7 @@ function outer ()
 const result = outer ();
 result();
 result();   
+result();
 
 
 
