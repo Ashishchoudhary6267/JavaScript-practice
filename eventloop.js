@@ -1,21 +1,21 @@
-function sum ()
-{
-    console.log(2+4);
-}
-console.log("start")
-console.log("run ");
-console.log("end");
-sum();
+// function sum ()
+// {
+//     console.log(2+4);
+// }
+// console.log("start")
+// console.log("run ");
+// console.log("end");
+// sum();
 
-setTimeout(() => {
-    console.log("this is set timeout");
-} , 2000 );
+// setTimeout(() => {
+//     console.log("this is set timeout");
+// } , 2000 );
 
- setInterval(() => {
-     console.log("this is set interval");
- } , 2000 );
+//  setInterval(() => {
+//      console.log("this is set interval");
+//  } , 2000 );
 
- console.log("end");
+//  console.log("end");
 
 
  // what is api 
@@ -33,4 +33,9 @@ setTimeout(() => {
     // event loop is a programming construct that allows JavaScript to perform non-blocking operations by offloading tasks to the browser's APIs,
     //  allowing the main thread to continue executing other tasks while waiting for the callbacks to complete.
 
- 
+ for( var i = 0 ; i < 3 ; i++)
+ {
+    setTimeout(() => {
+            console.log(i);
+        } , i * 1000)
+ }
