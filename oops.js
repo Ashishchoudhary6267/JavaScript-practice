@@ -90,7 +90,7 @@
 // a1.login(); 
 
 
-// inhertance concept
+// inhertance concept  ##########################
 
 // class employee{
 //     constructor(name, salary) {
@@ -148,31 +148,167 @@
 // bike2.readyToGo(); 
 
 
-// multi level inheritance
-// defination : Multi-level inheritance is a type of inheritance in object-oriented programming where a class is derived from another class,
-//  which is itself derived from a third class. In this hierarchy, the child class inherits properties and behaviors from the parent class,
-//  and the parent class inherits from the grandparent class.
+// // multi level inheritance  ##################
 
-class grandparent {
+// // defination : Multi-level inheritance is a type of inheritance in object-oriented programming where a class is derived from another class,
+// //  which is itself derived from a third class. In this hierarchy, the child class inherits properties and behaviors from the parent class,
+// //  and the parent class inherits from the grandparent class.
+
+// class grandparent {
+//     constructor(name) {
+//         this.name = name;
+//     }
+// }
+// class parent extends grandparent {
+//     constructor(name, age) {
+//         super(name);
+//         this.age = age;
+//     }
+// }   
+// class  child extends parent{
+//     constructor(name, age, school)
+//     {
+//         super(name, age )
+//         this.school= school;
+//     }
+// }
+// const c1  = new child ("ashish" , 21, "DAV public school");
+// console.log(c1);
+
+
+// hierarchical inheritance ##############################
+
+// class animal{
+//     constructor(name){
+//         this.name = name;
+//     }
+// }
+// class dog1 extends animal{
+//     constructor(name, breed, color){
+//         super(name);
+//         this.breed = breed ;
+//         this.color = color;
+//     }
+// }
+// class dog2 extends animal{
+//     constructor(name , breed , color){
+//         super(name);
+//         this.breed = breed;
+//         this.color = color;
+//     }
+// }
+// class dog3 extends animal{
+//     constructor(name, breed, color){
+//         super(name);
+//         this.breed= breed ;
+//         this.color = color ;
+//     }
+// }
+// const d1 = new dog1("gimu","labrador", "brown");
+// console.log(d1);
+// const d2 = new dog2("tommy", "german shepherd","black");
+// console.log(d2);
+// const d3 = new dog3 ("rocky", "bulldog", "white");
+// console.log(d3);
+
+
+
+// class user {
+//     constructor(name , age){
+//         this.name = name ;
+//         this.age = age ;
+//     }
+//     login(){
+//         console.log(`${this.name} logged in`);
+//     }
+// }
+// // child 1
+// class customer extends user {
+//     deleteuser() {
+//         console.log(`${this.name}  deleted a user`);
+//     }
+
+// }
+// // child 2
+// class customer2 extends user {
+//     buyproduct() {
+//         console.log(`${this.name} has bought a product`); 
+//     } // buyproduct
+// }
+// const c1 = new customer("ashish", 25);
+// const c2 = new customer2("satyam", 30);
+
+// c1.login();
+// c2.login();
+// c1.deleteuser();
+// c2.buyproduct();
+
+
+
+//mixins in js #########################
+// Mixins are a way to add functionality to classes in JavaScript without using traditional inheritance.
+
+
+//  class animal{
+//     eat(){
+//         console.log("Animal is eating");
+//     }
+//  }
+//  // mixin 
+//   const canrun =  (base)=>
+//      class extends base {
+//         run (){
+//             console.log("Animal is running");
+//         }
+//     }
+//     class dog extends canrun(animal) {
+//         bark() {
+//             console.log("Dog is barking");
+//         }
+//     }
+//     const d1 = new dog();
+//     d1.bark();
+//     d1.run();
+//     d1.eat();
+
+
+    // pronblem = multiple inheritsnce (dimond problem) ##################
+
+class person {
     constructor(name) {
         this.name = name;
     }
-}
-class parent extends grandparent {
-    constructor(name, age) {
-        super(name);
-        this.age = age;
+    breathe() {
+        console.log("person is breathing");
     }
-}   
-class  child extends parent{
-    constructor(name, age, school)
+}
+// first mixin
+ const canrun = (base )=> class extends base {
+    run ()
     {
-        super(name, age )
-        this.school= school;
+        console.log(`${this.name} is running`);
     }
 }
-const c1  = new child ("ashish" , 21, "DAV public school");
-console.log(c1);
-
-
-// hierarchical inheritance
+    // second mixin
+const canfly = (base) => class extends base {
+    fly() {
+        console.log(`${this.name} is flying`);
+    }   
+}
+// third mixin
+const canSwim = (base) => class extends base {
+    swim() {
+        console.log(`${this.name} is swimming`);
+    }
+} 
+            // superman class that inherits from all three mixins
+class superman extends canrun(canfly(canSwim(person))) {
+    constructor(name) {
+        super(name);
+    }
+}
+const s1 = new superman("clark");
+s1.run();
+s1.fly();
+s1.swim();
+s1.breathe();
