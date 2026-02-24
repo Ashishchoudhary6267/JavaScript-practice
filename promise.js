@@ -18,30 +18,30 @@
 
 // create a promise using the async function with add thre second delay
 
-// const fetchData = async () => {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             const success = true; // Simulating success or failure
-//             if (success) {
-//                 resolve("Data fetched successfully!");
-//             } else {
-//                 reject("Failed to fetch data.");
-//             }
-//         }, 3000);
-//     });
-// };
-// async function logData() {
-//             try {
-//                 const data = await fetchData();
-//                 console.log(data);
-//             } catch (error) {
-//                 console.error(error);
-//             }
-// }
-// logData();
+const fetchData = async () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const success = true; // Simulating success or failure
+            if (success) {
+                resolve("Data fetched successfully!");
+            } else {
+                reject("Failed to fetch data.");
+            }
+        }, 3000);
+    });
+};
+async function logData() {
+            try {
+                const data = await fetchData();
+                console.log(data);
+            } catch (error) {
+                console.error(error);
+            }
+}
+logData();
 
 
-// a promise to return user data after 2 second delay using array in the user data and handle the promise using async await
+ //a promise to return user data after 2 second delay using array in the user data and handle the promise using async await
 const getUserData = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
